@@ -15,7 +15,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import io.basenameservice.BaseNameResolver
 import kotlinx.coroutines.launch
-import nicola.ceornea.basenameresolver.ui.theme.BaseNameresolverTheme
+import nicola.ceornea.basenameresolver.ui.theme.BaseNameResolverTheme
 
 
 const val RPC_URL =  "YOUR-API"
@@ -25,7 +25,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            BaseNameresolverTheme {
+            BaseNameResolverTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     BaseNameResolverScreen(
                         modifier = Modifier.padding(innerPadding)

@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
+    id("maven-publish")
 }
 
 android {
@@ -55,3 +56,17 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
 }
 
+// Maven publishing configuration for JitPack
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("release") {
+                from(components["release"])
+                
+                groupId = "com.github.Nicola-Ceornea"
+                artifactId = "basenameservice"
+                version = "1.0.0"
+            }
+        }
+    }
+}
