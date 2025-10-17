@@ -14,14 +14,26 @@ The Base Name Resolver library implements the complete CCIP-Read flow:
 
 ## Setup
 
-### 1. Add Dependencies
+### 1. Add Dependencies (via JitPack)
 
-The library is already configured in your project. Make sure you have:
+Add JitPack to your project's `settings.gradle.kts`:
 
 ```kotlin
-// In app/build.gradle.kts
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url = uri("https://jitpack.io") }
+    }
+}
+```
+
+Then add the dependency in your app/library `build.gradle.kts`:
+
+```kotlin
 dependencies {
-    implementation(project(":basenameservice"))
+    implementation("com.github.Nicola-Ceornea:basenameservice:1.0.2")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
 }
 ```

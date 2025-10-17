@@ -6,12 +6,12 @@ plugins {
 
 android {
     namespace = "nicola.ceornea.basenameresolver"
-    compileSdk = 36
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "nicola.ceornea.basenameresolver"
-        minSdk = 35
-        targetSdk = 36
+        minSdk = 26
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 

@@ -33,7 +33,7 @@ In your app's `build.gradle.kts`:
 
 ```kotlin
 dependencies {
-    implementation("com.github.Nicola-Ceornea:BaseNameResolver:1.0.0")
+    implementation("com.github.Nicola-Ceornea:basenameservice:1.0.2")
 }
 ```
 
@@ -112,7 +112,8 @@ lifecycleScope.launch {
 
 ## Requirements
 
-- Android SDK 35+
+- Android minSdk 21+
+- compileSdk 34 / targetSdk 34
 - Kotlin 1.9+
 - An Ethereum RPC endpoint (e.g., from [Alchemy](https://www.alchemy.com/), [Infura](https://infura.io/), or [QuickNode](https://www.quicknode.com/))
 

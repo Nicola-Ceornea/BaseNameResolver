@@ -6,11 +6,11 @@ plugins {
 
 android {
     namespace = "io.basenameservice"
-    compileSdk = 36
+    compileSdk = 34
 
     defaultConfig {
-        minSdk = 35
-        targetSdk = 36
+        minSdk = 21
+        targetSdk = 34
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
@@ -35,10 +35,10 @@ android {
 }
 
 dependencies {
-    implementation(libs.androidx.core.ktx)
-    
-    // Web3j for Ethereum interaction
-    implementation("org.web3j:core:4.10.3")
+    // Keep minimal AndroidX usage to avoid high compileSdk requirements
+
+    // Web3j for Ethereum interaction (4.9.x for Android SDK 34 compatibility)
+    implementation("org.web3j:core:4.9.8")
     
     // OkHttp for HTTP requests to gateway
     implementation("com.squareup.okhttp3:okhttp:4.12.0")
@@ -65,7 +65,7 @@ afterEvaluate {
                 
                 groupId = "com.github.Nicola-Ceornea"
                 artifactId = "basenameservice"
-                version = "1.0.0"
+                version = "1.0.2"
             }
         }
     }
